@@ -20,17 +20,15 @@ public class TodoPage extends BasePage {
 	/*Locators*/
 	final static String INPUT_TEXT = "//header/form[1]/input[1]";
 	final static String ELEMENT_TODO = "//label[@class='ng-binding']";
-	final static String CHECKBOX = "//input[@type= 'checkbox']";
+	final static String CHECK_BOX = "//input[@type= 'checkbox']";
 
 	/*@FindBy*/
 	//@FindBy(id = INPUT_TEXT)
 	//private WebElement inputText;
 	@FindBy(how = How.XPATH, using = INPUT_TEXT)
 	public static WebElement inpuText;
-	
 	@FindBy(how = How.XPATH, using = ELEMENT_TODO)
 	public static WebElement elementTodo;
-	
 	@FindBy(how = How.XPATH, using = CHECK_BOX)
 	public static WebElement checkBox;
 

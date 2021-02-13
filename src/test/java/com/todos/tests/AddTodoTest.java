@@ -3,8 +3,10 @@ package com.todos.tests;
 import java.io.IOException;
 
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import com.todos.pages.TodoPage;
 import com.todos.utils.Setup;
 
 public class AddTodoTest extends Setup {
@@ -24,7 +26,10 @@ public class AddTodoTest extends Setup {
 		Assert.assertTrue(element.contains(prop.getProperty("todo1")));
 		boolean boxCheck = todopage.isCheckBoxSelected(TodoPage.checkBox);
 		Assert.assertFalse(boxCheck);
-		
 	} 
+	public String checkTextIsRemoved(WebElement element) {
 
+		String pageSource = driver.getPageSource();
+		return pageSource;
+		}
 }
